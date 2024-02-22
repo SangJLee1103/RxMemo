@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		021E46FC2B8773A30027C7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E46FB2B8773A30027C7BD /* AppDelegate.swift */; };
 		021E46FE2B8773A30027C7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E46FD2B8773A30027C7BD /* SceneDelegate.swift */; };
-		021E47002B8773A30027C7BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E46FF2B8773A30027C7BD /* ViewController.swift */; };
 		021E47032B8773A30027C7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021E47012B8773A30027C7BD /* Main.storyboard */; };
 		021E47062B8773A30027C7BD /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 021E47042B8773A30027C7BD /* RxMemo.xcdatamodeld */; };
 		021E47082B8773A50027C7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021E47072B8773A50027C7BD /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 		021E46F82B8773A30027C7BD /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021E46FB2B8773A30027C7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021E46FD2B8773A30027C7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		021E46FF2B8773A30027C7BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		021E47022B8773A30027C7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		021E47052B8773A30027C7BD /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		021E47072B8773A50027C7BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,16 +63,55 @@
 		021E46FA2B8773A30027C7BD /* RxMemo */ = {
 			isa = PBXGroup;
 			children = (
+				02BF358E2B87777700F916D0 /* Scene */,
+				02BF358D2B87776100F916D0 /* Service */,
+				02BF358C2B87775900F916D0 /* ViewModel */,
+				02BF358B2B87775100F916D0 /* ViewController */,
+				02BF358A2B87774700F916D0 /* Model */,
 				021E46FB2B8773A30027C7BD /* AppDelegate.swift */,
 				021E46FD2B8773A30027C7BD /* SceneDelegate.swift */,
-				021E46FF2B8773A30027C7BD /* ViewController.swift */,
-				021E47012B8773A30027C7BD /* Main.storyboard */,
 				021E47072B8773A50027C7BD /* Assets.xcassets */,
-				021E47092B8773A50027C7BD /* LaunchScreen.storyboard */,
 				021E470C2B8773A50027C7BD /* Info.plist */,
 				021E47042B8773A30027C7BD /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
+			sourceTree = "<group>";
+		};
+		02BF358A2B87774700F916D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02BF358B2B87775100F916D0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				021E47012B8773A30027C7BD /* Main.storyboard */,
+				021E47092B8773A50027C7BD /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		02BF358C2B87775900F916D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02BF358D2B87776100F916D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		02BF358E2B87777700F916D0 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		59B14AB9F3F668C02ACE2997 /* Frameworks */ = {
@@ -209,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				021E47002B8773A30027C7BD /* ViewController.swift in Sources */,
 				021E46FC2B8773A30027C7BD /* AppDelegate.swift in Sources */,
 				021E46FE2B8773A30027C7BD /* SceneDelegate.swift in Sources */,
 				021E47062B8773A30027C7BD /* RxMemo.xcdatamodeld in Sources */,

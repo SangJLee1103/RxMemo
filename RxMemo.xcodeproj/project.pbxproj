@@ -27,6 +27,7 @@
 		02BF35A82B87813000F916D0 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF35A72B87813000F916D0 /* Scene.swift */; };
 		02BF35AA2B87836F00F916D0 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF35A92B87836F00F916D0 /* SceneCoordinatorType.swift */; };
 		02BF35AC2B8783EF00F916D0 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF35AB2B8783EF00F916D0 /* SceneCoordinator.swift */; };
+		02BF35AE2B8A109900F916D0 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF35AD2B8A109900F916D0 /* CommonViewModel.swift */; };
 		196E5E37BA8036B0B920D168 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B9B6A7EC1645297B889916 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		02BF35A72B87813000F916D0 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		02BF35A92B87836F00F916D0 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		02BF35AB2B8783EF00F916D0 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		02BF35AD2B8A109900F916D0 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		53B9B6A7EC1645297B889916 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B008949C11950F2A769DED7 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F49E0A6261715915561308B0 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				02BF359F2B877F2700F916D0 /* MemoDetailViewModel.swift */,
 				02BF35A12B877F3F00F916D0 /* MemoComposeViewModel.swift */,
 				02BF35A32B877F5A00F916D0 /* ViewModelBindableType.swift */,
+				02BF35AD2B8A109900F916D0 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				02BF35AA2B87836F00F916D0 /* SceneCoordinatorType.swift in Sources */,
 				02BF359E2B877F0200F916D0 /* MemoListViewModel.swift in Sources */,
 				02BF35A02B877F2700F916D0 /* MemoDetailViewModel.swift in Sources */,
+				02BF35AE2B8A109900F916D0 /* CommonViewModel.swift in Sources */,
 				02BF35A62B8780CC00F916D0 /* TransitionModel.swift in Sources */,
 				02BF35982B877E3C00F916D0 /* MemoListViewController.swift in Sources */,
 				02BF359C2B877EA300F916D0 /* MemoComposeViewController.swift in Sources */,

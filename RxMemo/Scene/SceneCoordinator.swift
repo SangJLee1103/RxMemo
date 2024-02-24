@@ -54,7 +54,7 @@ class SceneCoordinator: SceneCoordinatorType {
     }
     
     @discardableResult
-    func close(animated: Bool) -> RxSwift.Completable {
+    func close(animated: Bool) -> Completable {
         // Completable을 직접 생성하는 방식으로 구현
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentedViewController {

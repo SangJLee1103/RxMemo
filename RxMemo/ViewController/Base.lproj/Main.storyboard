@@ -31,14 +31,51 @@
                     <view key="view" contentMode="scaleToFill" id="Kbl-it-lQN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-gH-3G8">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="7C8-JW-V3R" style="IBUITableViewCellStyleDefault" id="qlL-3e-cgR">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qlL-3e-cgR" id="Q0o-px-cKy">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7C8-JW-V3R">
+                                                    <rect key="frame" x="20" y="0.0" width="334.66666666666669" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HjN-pp-gWg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bV7-gH-3G8" firstAttribute="trailing" secondItem="HjN-pp-gWg" secondAttribute="trailing" id="K7G-FO-OcW"/>
+                            <constraint firstItem="bV7-gH-3G8" firstAttribute="leading" secondItem="HjN-pp-gWg" secondAttribute="leading" id="bjV-NZ-r9U"/>
+                            <constraint firstAttribute="bottom" secondItem="bV7-gH-3G8" secondAttribute="bottom" id="g8A-DU-3i3"/>
+                            <constraint firstItem="bV7-gH-3G8" firstAttribute="top" secondItem="Kbl-it-lQN" secondAttribute="top" id="opY-qZ-btm"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 목록" id="Ni9-FA-UwY"/>
+                    <navigationItem key="navigationItem" title="메모 목록" id="Ni9-FA-UwY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t3h-NJ-33R"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="t3h-NJ-33R" id="qvs-2U-Zhc"/>
+                        <outlet property="listTableView" destination="bV7-gH-3G8" id="hYY-MM-u0H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEk-s9-Fs3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="5"/>
+            <point key="canvasLocation" x="1803.8167938931297" y="4.9295774647887329"/>
         </scene>
         <!--새 메모-->
         <scene sceneID="jMG-C4-2xy">

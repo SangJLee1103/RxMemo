@@ -9,6 +9,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        return self.children.last ?? self
+    }
+}
+
 class SceneCoordinator: SceneCoordinatorType {
     private let bag = DisposeBag()
     
@@ -28,26 +34,32 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentVC = target
+            currentVC = target.sceneViewController
             window.rootViewController = target
             
             subject.onCompleted()
         case .push:
-            
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
             
+            nav.rx.willShow
+                .withUnretained(self)
+                .subscribe(onNext: { (coordinator, evt) in
+                    coordinator.currentVC = evt.viewController.sceneViewController
+                })
+                .disposed(by: bag)
+            
             nav.pushViewController(target, animated: animated)
-            currentVC = target
+            currentVC = target.sceneViewController
             subject.onCompleted()
         case .modal:
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
             
-            currentVC = target
+            currentVC = target.sceneViewController
         }
         
         return subject.asCompletable()
@@ -59,7 +71,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentedViewController {
                 self.currentVC.dismiss(animated: animated) {
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             }
@@ -69,7 +81,7 @@ class SceneCoordinator: SceneCoordinatorType {
                     completable(.error(TransitionError.cannotPop))
                     return Disposables.create()
                 }
-                self.currentVC = nav.viewControllers.last!
+                self.currentVC = nav.viewControllers.last!.sceneViewController
                 completable(.completed)
             }
             
